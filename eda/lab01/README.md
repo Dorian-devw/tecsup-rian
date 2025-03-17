@@ -57,23 +57,28 @@ For each algorithm:
 
 ## Student Information
 
-- **Name:** Elliot Leo Garamendi Sarmiento
-- **Course:** Algorithms and Data Structures
+- **Name:** Frank Sinca Orozco
+- **Course:** Algorithms and Data Structures- TECSUP
 
 ## Prompt Engineering (Example for one algorithm)
 
 ### Prompt Entered
 ```
-Implement an algorithm with logarithmic time complexity O(log n) that divides n by 2 repeatedly until reaching 0. Measure its execution time with n values: 1, 10, 100, 1000, 10000, 100000, 1000000.
+Determine the execution time for a simple loop combined with a nested loop of level 2. The values of n to be tested are: 100, 400, 600, 800, 1000, and 1100.```
 ```
-
 ### Prompt Analysis
-The original prompt was specific about the algorithm's implementation but didn't include details about visualization or analysis.
+1. The original prompt was specific about the algorithm's implementation but didn't includ1.	Objective: The goal is to measure the processing time of a loop structure that includes a simple loop and a nested loop (level 2).
+2.	Input: A set of values for n (100, 400, 600, 800, 1000, 1100).
+3.	Output: The execution time for each value of n.
+4.	Assumptions: The loops are likely performing some basic operations (e.g., arithmetic or iteration), but the specific task inside the loops is not defined.
+
 
 ### Improved Prompt
 ```
-Implement a logarithmic algorithm O(log n) that divides n by 2 repeatedly. Measure its execution time with n values from 1 to 1,000,000, visualize the results, and analyze how the execution time scales in relation to the input size.
+Develop a Python script to measure the execution time of a nested loop structure consisting of a simple outer loop and a level 2 inner loop. The inner loop should perform a basic arithmetic operation, such as multiplying the loop indices (i * j). Test the script for the following values of n: 100, 400, 600, 800, 1000, and 1100. The goal is to analyze how the processing time scales with increasing values of n and to provide insights into the time complexity of the algorithm. Ensure the script outputs both the processing time and the result of the arithmetic operation for each n. Additionally, specify the Python version and environment in which the script should be executed
 ```
+
+
 
 ## Conclusions
 
