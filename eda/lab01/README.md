@@ -1,4 +1,5 @@
-*Lab 01: Algorithm Complexity Analysis*
+******Lab 01: Algorithm Complexity Analysis******
+
 This laboratory explores different algorithm complexities and measures their execution times.
 Contents
 -	main.py: Python script implementing algorithms with different time complexities
