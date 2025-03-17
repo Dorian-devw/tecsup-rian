@@ -2,16 +2,16 @@
 
 This laboratory explores different algorithm complexities and measures their execution times.
 
-## Contents
+## 📁Contents📁
 
 - `main.py`: Python script implementing algorithms with different time complexities
 
-## Requirements
+## 🛠️Requirements🛠️
 
 - Python 3.x
 - Matplotlib library (`pip install matplotlib`)
 
-## Usage
+## 🛠️📎Usage🛠️📎
 
 1. Install the required dependencies:
    ```
