@@ -1,0 +1,61 @@
+<!-- este archivo esta enlazado con PROPUESTOS/Propuesto1.php -->   
+
+<!-- este archivo es un formulario que pide dos numeros y los envia a Propuesto1.php para calcular los numeros primos entre ellos -->
+
+<!-- FRANK SINCA OROZCO | Tecsup 2025 - 1-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Primos</title>
+</head>
+<!-- Es mi css-->
+<style>
+    form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+    }
+
+    input[type="number"]{
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #218838;
+    }
+</style>
+
+<body>
+    <h1>Números Primos</h1>
+    <form action="Propuesto1.php" method="get">
+        <label for="inicio">Número de inicio:</label>
+        <input type="number" id="inicio" name="inicio" min="1" required><br><br>
+
+        <label for="fin">Número de fin:</label>
+        <input type="number" id="fin" name="fin" min="1" required><br><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

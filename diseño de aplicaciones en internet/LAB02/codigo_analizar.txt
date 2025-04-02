@@ -1,0 +1,175 @@
+##### Propuesto 1: Crear un programa que calcule el factorial de un número ingresado por el usuario utilizando una estructura de control de repetición. El programa debe solicitar al usuario que ingrese un número entero positivo y luego calcular su factorial utilizando un bucle `for` o `while`. Finalmente, debe mostrar el resultado en pantalla.
+```php
+<?php
+// Propuesto 1: Calcular el factorial de un número ingresado por el usuario
+function calcularFactorial($numero) {
+    $factorial = 1;
+    for ($i = 1; $i <= $numero; $i++) {
+        $factorial *= $i;
+    }
+    return $factorial;
+}
+
+// Solicitar al usuario que ingrese un número entero positivo
+$numero = (int)readline("Ingrese un número entero positivo: ");
+if ($numero < 0) {
+    echo "El número debe ser positivo.\n";
+} else {
+    $resultado = calcularFactorial($numero);
+    echo "El factorial de $numero es: $resultado\n";
+}   
+
+?>
+```
+___    
+
+##### Propuesto 2: Crear un programa que determine si un número ingresado por el usuario es primo o no utilizando una estructura de control de selección. El programa debe solicitar al usuario que ingrese un número entero positivo y luego verificar si es primo utilizando una estructura `if-else`. Finalmente, debe mostrar el resultado en pantalla.
+```php
+<?php   
+// Propuesto 2: Determinar si un número es primo o no
+function esPrimo($numero) {
+    if ($numero <= 1) {
+        return false;
+    }
+    for ($i = 2; $i <= sqrt($numero); $i++) {
+        if ($numero % $i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Solicitar al usuario que ingrese un número entero positivo
+$numero = (int)readline("Ingrese un número entero positivo: ");
+if ($numero < 0) {
+    echo "El número debe ser positivo.\n";
+} else {
+    if (esPrimo($numero)) {
+        echo "$numero es un número primo.\n";
+    } else {
+        echo "$numero no es un número primo.\n";
+    }
+}
+?>
+```
+___ 
+
+##### Propuesto 3: Crear un programa que calcule la suma de los números pares e impares de un rango ingresado por el usuario utilizando una estructura de control de repetición. El programa debe solicitar al usuario que ingrese dos números enteros y luego calcular la suma de los números pares e impares en ese rango utilizando un bucle `for`. Finalmente, debe mostrar el resultado en pantalla.
+```php
+<?php
+// Propuesto 3: Calcular la suma de números pares e impares en un rango
+
+function calcularSumaParesImpares($inicio, $fin) {
+    $sumaPares = 0;
+    $sumaImpares = 0;
+    for ($i = $inicio; $i <= $fin; $i++) {
+        if ($i % 2 == 0) {
+            $sumaPares += $i;
+        } else {
+            $sumaImpares += $i;
+        }
+    }
+    return [$sumaPares, $sumaImpares];
+}
+
+// Solicitar al usuario que ingrese dos números enteros
+$inicio = (int)readline("Ingrese el número de inicio: ");
+$fin = (int)readline("Ingrese el número de fin: ");
+if ($inicio > $fin) {
+    echo "El número de inicio debe ser menor o igual al número de fin.\n";
+} else {
+    list($sumaPares, $sumaImpares) = calcularSumaParesImpares($inicio, $fin);
+    echo "La suma de los números pares en el rango [$inicio, $fin] es: $sumaPares\n";
+    echo "La suma de los números impares en el rango [$inicio, $fin] es: $sumaImpares\n";
+}
+?>
+```
+___
+
+##### Propuesto 4: Crear un programa que muestre la tabla de multiplicar de un número ingresado por el usuario utilizando una estructura de control de repetición. El programa debe solicitar al usuario que ingrese un número entero y luego mostrar la tabla de multiplicar de ese número utilizando un bucle `for`. Finalmente, debe mostrar el resultado en pantalla.
+```php
+<?php
+// Propuesto 4: Mostrar la tabla de multiplicar de un número ingresado por el usuario
+
+function mostrarTablaMultiplicar($numero) {
+    for ($i = 1; $i <= 10; $i++) {
+        echo "$numero x $i = " . ($numero * $i) . "\n";
+    }
+}
+// Solicitar al usuario que ingrese un número entero       
+$numero = (int)readline("Ingrese un número entero: ");
+if ($numero < 0) {
+    echo "El número debe ser positivo.\n";
+} else {
+    echo "Tabla de multiplicar de $numero:\n";
+    mostrarTablaMultiplicar($numero);
+}  
+?>
+```
+___ 
+
+##### Propuesto 5: Crear un programa que calcule la suma de los dígitos de un número ingresado por el usuario utilizando una estructura de control de repetición. El programa debe solicitar al usuario que ingrese un número entero positivo y luego calcular la suma de sus dígitos utilizando un bucle `while`. Finalmente, debe mostrar el resultado en pantalla.
+```php
+<?php
+// Propuesto 5: Calcular la suma de los dígitos de un número ingresado por el usuario
+
+function calcularSumaDigitos($numero) {
+    $suma = 0;
+    while ($numero > 0) {
+        $suma += $numero % 10; // Obtener el último dígito
+        $numero = (int)($numero / 10); // Eliminar el último dígito
+    }
+    return $suma;
+}
+
+// Solicitar al usuario que ingrese un número entero positivo
+$numero = (int)readline("Ingrese un número entero positivo: ");
+if ($numero < 0) {
+    echo "El número debe ser positivo.\n";
+} else {
+    $resultado = calcularSumaDigitos($numero);
+    echo "La suma de los dígitos de $numero es: $resultado\n";
+}
+?>
+```
+___     
+
+##### Propuesto 6: Crear un programa que determine el número mayor y menor de una serie de números ingresados por el usuario utilizando una estructura de control de repetición. El programa debe solicitar al usuario que ingrese una serie de números enteros y luego determinar el número mayor y menor utilizando un bucle `while`. Finalmente, debe mostrar el resultado en pantalla.
+```php
+<?php   
+// Propuesto 6: Determinar el número mayor y menor de una serie de números ingresados por el usuario
+
+function encontrarMayorMenor($numeros) {
+    $mayor = $numeros[0];
+    $menor = $numeros[0];
+    foreach ($numeros as $numero) {
+        if ($numero > $mayor) {
+            $mayor = $numero;
+        }
+        if ($numero < $menor) {
+            $menor = $numero;
+        }
+    }
+    return [$mayor, $menor];
+}
+
+// Solicitar al usuario que ingrese una serie de números enteros
+$numeros = [];
+while (true) {
+    $numero = (int)readline("Ingrese un número entero (0 para terminar): ");
+    if ($numero == 0) {
+        break; // Terminar la entrada de números
+    }
+    $numeros[] = $numero;
+}
+
+if (count($numeros) > 0) {
+    list($mayor, $menor) = encontrarMayorMenor($numeros);
+    echo "El número mayor es: $mayor\n";
+    echo "El número menor es: $menor\n";
+} else {
+    echo "No se ingresaron números.\n";
+}
+?>
+```
+___     
